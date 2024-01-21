@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/jc3wrld999/gogrpc/calculator/proto";
+
+message SumRequest {
+  int32 first_name = 1;
+  int32 second_name = 2;
+}
+
+message SumResponse {
+  int32 result = 1;
+
+}
