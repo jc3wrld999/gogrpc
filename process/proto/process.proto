@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package process;
+
+option go_package = "github.com/jc3wrld999/gogrpc/process/proto";
+
+service ProcessService {
+  rpc ExecuteCommand(CommandRequest) returns (CommandResponse);
+}
+
+message CommandRequest {
+  string command = 1;
+}
+
+message CommandResponse {
+  string output = 1;
+}
